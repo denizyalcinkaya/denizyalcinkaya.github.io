@@ -104,7 +104,11 @@ body, html {
     background-image: url("back1.jpg");
     filter: blur(8px) grayscale(80%);
     -webkit-filter: blur(8px) grayscale(80%);
-    height: 100%; 
+    height: 80%; 
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,6 +145,7 @@ body, html {
     height: 100%; 
       margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: #1f2020;
     /*background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
