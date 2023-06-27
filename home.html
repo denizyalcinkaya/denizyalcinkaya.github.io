@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Şerefsiz Mimar</title>
+  <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+  <link href="home.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<div class="sefa"> 
+<nav id="main-nav">
+  <a href="#home" class="active"><!--<i class="fa fa-fw fa-home"></i>-->Ana Sayfa</a>
+  <a href="https://denizyalcinkaya.github.io/about">Hakkımızda</a>
+  <a href="https://denizyalcinkaya.github.io/faaliyetler">Faaliyetlerimiz</a>
+  <a href="#contact">İletişim</a>
+</nav>
+</div>
+
+<section id="home">
+  <div class="bg-image"></div>
+  <div class="bg-text">
+  <h2 style="color: aliceblue;">Merhaba!</h2>
+  <h1 style="font-size:50px">Ben, Mimar Deniz Yalçınkaya</h1>
+  <p>Aynı zamanda bir Yüksek Şerefsizim&copy;</p>
+  </div>
+  <article>
+    
+  </article>
+  <div class="popup">
+    <button id="close">&times;</button>
+    <h2>Birlikte daha güçlüyüz!</h2>
+    <p>
+      Şerefsizlikle mücadele etmek, toplumun her bir ferdi olarak hepimizin sorumluluğudur. Kendi etik değerlerimize bağlı kalarak, dürüstlüğü, saygıyı ve adaleti öne 
+      çıkaran ve şerefsizliği reddeden bir toplum inşa edebiliriz. Bu web sitesi, şerefsizlikle mücadele için bir başlangıç noktasıdır. Lütfen sayfamızdaki içeriklere destek olalım.
+    </p>
+    <a href="mailto:sefay.19@gmail.com">İletişim</a>
+</div>
+</section>
+
+<section id="contact">
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/shorts/pCViCtKMzCw" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a></li> 
+        <li class="social-icon__item"><a class="social-icon__link" href="#" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#" target="_blank">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a></li>
+      </ul>
+      
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#home">Ona ulaşmak imkansıza
+          yakındır, o istemeden asla ulaşamazsınız!
+        </a></li>
+      </ul>
+      <a href="mailto:sefay.19@gmal.com" target="_blank">İçeriğimize destek olmak için tıklayınız.</a>
+      <p>&copy;2023 ŞerefsizMimar | Hiçbir Hakkı Saklı Değildir</p>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</section>
+
+
+<script type="text/javascript">
+  window.addEventListener("load", function(){
+      setTimeout(
+          function open(event){
+              document.querySelector(".popup").style.display = "block";
+          },
+          2000 
+      )
+  });
+  
+  
+  document.querySelector("#close").addEventListener("click", function(){
+      document.querySelector(".popup").style.display = "none";
+  });
+      </script>
+
+<style media="screen">
+  *,
+*:before,
+*:after{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.popup{
+background-color: #ffffff;
+width: 420px;
+padding: 30px 40px;
+position: absolute;
+transform: translate(-50%,-50%);
+left: 50%;
+top: 50%;
+border-radius: 8px;
+font-family: "Poppins",sans-serif;
+display: none; 
+text-align: center;
+z-index: 6000;
+}
+.popup button{
+display: block;
+margin:  0 0 20px auto;
+background-color: transparent;
+font-size: 30px;
+color: #ffffff;
+background: #03549a;
+border-radius: 100%;
+width: 40px;
+height: 40px;
+border: none;
+outline: none;
+cursor: pointer;
+}
+.popup h2{
+margin-top: -20px;
+}
+.popup p{
+font-size: 14px;
+text-align: justify;
+margin: 20px 0;
+line-height: 25px;
+}
+.popup a{
+display: block;
+width: 150px;
+position: relative;
+margin: 10px auto;
+text-align: center;
+background-color: #0f72e5;
+border-radius: 20px;
+color: #ffffff;
+text-decoration: none;
+padding: 8px 0;
+}
+</style>
