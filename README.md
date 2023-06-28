@@ -1,1 +1,1 @@
-#bayram dolayısıyla kapalıyız.
+Bayram dolayısıyla kapalıyız.
