@@ -1,1 +1,1 @@
-# serefsizmimar.github.io
+#bayram dolayısıyla kapalıyız.
