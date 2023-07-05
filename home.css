@@ -1,94 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: poppins, sans-serif;  
   margin: 0px;
+  font-family: 'segoe ui';
 }
 
-#main-nav {
-  border-radius: 25px;
-  height: fit-content;
-  display: inline-flex;
-  background-color: rgba(0, 0, 0, .4);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  align-items: center;
-  padding: 0 10px;
-  margin: 10px 0 0 0;
-  position: fixed;
-  z-index: 5;
-}
-.sefa{
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-nav a {
-  list-style: none;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 12px 26px;
-  margin: 0 8px;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-  text-decoration: none;
-}
-
-#main-nav.sticky {
-  position: fixed;
-  top: 0;
-}
-
-/*nav a.active {
-  border-radius: 25px;
-  color: orange;
-}*/
-
-#main-nav a::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.nav {
+  height: 50px;
   width: 100%;
-  z-index: -1;
-  transition: 0.5s;
-  border-radius: 25px;
-}
-#main-nav a:hover {
-  color: black;
+  background-color: #4d4d4d;
+  position: relative;
+  position: fixed;
+  z-index: 6000;
 }
 
-#main-nav a:hover::before {
-  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
-  box-shadow: 0px 3px 20px 0px black;
-  transform: scale(1.2);
+.nav > .nav-header {
+  display: inline;
 }
 
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: orange;
+  padding: 10px 10px 10px 10px;
+}
 
-@media screen and (max-width: 900px) {
-  #main-nav {
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 30px 13px 30px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: orange;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:1200px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
     width: 100%;
-    padding: 0 0 0 0;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
   }
-  
- #main-nav a {
-    float: right;
-    padding: 15px;
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
   }
-  
-  div.content {margin-left: 0;}
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: fit-content;
+    overflow-y: auto;
+  }
 }
-
-@media screen and (max-width: 400px) {
-  #main-nav a {
-    text-align: center;
-    float: right;
-  }
-}
+/*new nav end*/
 section {
   min-height: 100vh;
   
@@ -109,6 +120,7 @@ body, html {
     position: absolute;
     top: 10%;
     left: 5%;
+    align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -130,11 +142,7 @@ body, html {
     padding: 20px;
     text-align: center;
   }
-  @media only screen and (max-device-width: 1366px) {
-    .parallax {
-      background-attachment: scroll;
-    }
-  }
+
   
   
   section#home {
@@ -195,6 +203,11 @@ body, html {
   body {
     font-size: 14px;
   }
+  .menu__link {
+    font-size: 2vh;
+    font-weight: 200;
+    margin: 0 0 0 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -253,7 +266,7 @@ body, html {
 .menu__link {
   font-size: 3vh;
   color: #fff;
-  margin: 0 20px;
+  margin: 0 0;
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
@@ -267,7 +280,7 @@ body, html {
 
 .footer p {
   color: #fff;
-  margin: 15px 0 10px 0;
+  margin: 15px 0 0 0;
   font-size: 2vh;
   font-weight: 300;
 }
@@ -327,3 +340,10 @@ body, html {
     background-positon-x: 0px;
   }
 }
+
+/*new menu*/
+
+
+/*new menu end*/
+
+
