@@ -1,1 +1,0 @@
-Bayram dolayısıyla kapalıyız.
